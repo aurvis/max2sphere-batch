@@ -203,6 +203,8 @@ int main(int argc,char **argv)
    	WriteSpherical(fname1,nframe,spherical,params.outwidth,params.outheight);
 	}
 
+	remove(tablename);
+
    exit(0);
 }
 
