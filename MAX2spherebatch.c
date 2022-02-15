@@ -97,7 +97,7 @@ int main(int argc,char **argv)
    // Does a table exist? If it does load it, if not create it and save it
 	ntable = params.outheight * params.outwidth * params.antialias * params.antialias;
 	lltable = malloc(ntable*sizeof(LLTABLE));
-	sprintf(tablename,"%d_%d_%d_%d.data",whichtemplate,params.outwidth,params.outheight,params.antialias);
+	sprintf(tablename,"/tmp/%d_%d_%d_%d.data",whichtemplate,params.outwidth,params.outheight,params.antialias);
 	if ((fptr = fopen(tablename,"r")) != NULL) {
 		if (params.debug)
 			fprintf(stderr,"%s() - Reading lookup table\n",argv[0]);
